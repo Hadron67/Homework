@@ -6,7 +6,8 @@
 #include <string.h>
 void hanoi(int n,int a,int b,long*);
 void hanoi(int n,int a,int b,long* steps){
-	int c=(a==1&&b==2||a==2&&b==1)?3:((a==1&&b==3||a==3&&b==1)?2:1);
+	//int c=(a==1&&b==2||a==2&&b==1)?3:((a==1&&b==3||a==3&&b==1)?2:1);
+	int c=6-a-b;
 	if(n!=0){
 		hanoi(n-1,a,c,steps);
 		if(steps!=NULL) {
