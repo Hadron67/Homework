@@ -54,7 +54,10 @@ int main(int agv,char* ags[]){
 					break;
 				default:;
 			}
-			if(key=='q') return 1;
+			if(key=='q') {
+				printf("good bye.\n");
+				return 1;
+			}
 		}
 		printf("you win!\n");
 		printf("play again?(y/n)");
@@ -63,6 +66,6 @@ int main(int agv,char* ags[]){
 		printf("\n");
 		if(_continue=='n') break;
 	}
-	printf("good bye\n");
+	printf("good bye.\n");
 	return 0;
 }
