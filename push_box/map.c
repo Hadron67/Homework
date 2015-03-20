@@ -35,6 +35,10 @@ void map_init_from_string(Map* m,int width,int height,const char* s){
 			m->data[i]='_';
 			m->boxes[i]=1;
 		}
+		else if(s[i]=='m'){
+			m->data[i]='.';
+			m->boxes[i]=1;
+		}
 	}
 }
 Map* map_new(int width,int height){
