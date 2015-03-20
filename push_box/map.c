@@ -102,7 +102,12 @@ void map_print(Map* map){
 				printf("%c ",'A');
 			}
 			else if(map->boxes[j+i*map->width]){
-				printf("%c ",'M');
+				if(map->data[j+i*map->width]=='.'){					
+					printf("%c ",'m');
+				}
+				else{
+					printf("%c ",'M');
+				}
 			}
 			else {
 				printf("%c ",map->data[j+i*map->width]);
