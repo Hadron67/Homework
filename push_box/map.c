@@ -20,19 +20,20 @@ void map_init_from_string(Map* m,int width,int height,const char* s){
 	m->boxes=(int*)malloc(sizeof(int)*width*height);
 	m->width=width;
 	m->height=height;
+	m->p_x=m->p_y=0;
 	for(int i=0;i<width*height;i++) {
-		if(s[i]=='#'||s[i]=='.'||s[i]=='_'){
+		if(s[i]=='#'||s[i]=='.'||s[i]==' '){
 			m->data[i]=s[i];
 			m->boxes[i]=0;
 		}
 		else if(s[i]=='A'){
-			m->data[i]='_';
+			m->data[i]=' ';
 			m->boxes[i]=0;
 			m->p_x=i%width;
 			m->p_y=(i-m->p_x)/width;
 		}
 		else if(s[i]=='M'){
-			m->data[i]='_';
+			m->data[i]=' ';
 			m->boxes[i]=1;
 		}
 		else if(s[i]=='m'){
@@ -58,38 +59,38 @@ void map_free(Map* m){
 }
 Map* map_get(int which){
 	static const char* mapdata1=
-	"___###____" 
-	"___#.#____"
-	"___#_#____"
-	"___#M#####"
-	"___#__M._#"
-	"####A_####"
-	"#._M_M#___"
-	"#####_#___"
-	"____#.#___"
-	"____###___";
+	"   ###    " 
+	"   #.#    "
+	"   # #    "
+	"   #M#####"
+	"   #  M. #"
+	"####A ####"
+	"#. M M#   "
+	"##### #   "
+	"    #.#   "
+	"    ###   ";
 	static const char* mapdata2=
-	"__######__" 
-	"###__._###"
-	"#_M.MMM__#"
-	"#_#_#._#_#"
-	"#_A._._#_#"
-	"####_M___#"
-	"___#M.####"
-	"___#__#___"
-	"___####___"
-	"__________";
+	"  ######  " 
+	"###  . ###"
+	"# M.MMM  #"
+	"# # #. # #"
+	"# A. . # #"
+	"#### M   #"
+	"   #M.####"
+	"   #  #   "
+	"   ####   "
+	"          ";
 	static const char* mapdata3=
-	"__#####___"
-	"_##___##__"
-	"_#__M..##_"
-	"##M_#.M.#_"
-	"#___#...#_"
-	"#_M###M_#_"
-	"#__M_M_##_"
-	"##A____#__"
-	"_#######__"
-	"__________";
+	"  #####   "
+	" ##   ##  "
+	" #  M..## "
+	"##M #.M.# "
+	"#   #...# "
+	"# M###M # "
+	"#  M M ## "
+	"##A    #  "
+	" #######  "
+	"          ";
 	static const char* mapdatas[10];
 	mapdatas[0]=mapdata1;
 	mapdatas[1]=mapdata2;
