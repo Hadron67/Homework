@@ -30,7 +30,7 @@ int main(int agv,char* ags[]){
 			printf("maze_command>");
 			if(map_iswin(m)) {
 				map_free(m);
-				if(level>4) break;
+				if(level>2) break;
 				m=map_get(level++);	
 			}
 			char key=getchar();

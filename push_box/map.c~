@@ -111,7 +111,7 @@ Map* map_get(int which){
 	"# # m M # "
 	"# # m MA# "
 	"#  .. M # "
-	"######### ";
+	"######### "
 	static const char* mapdatas[10];
 	mapdatas[0]=mapdata1;
 	mapdatas[1]=mapdata2;
