@@ -13,6 +13,9 @@ int main(int agv,char* ags[]){
 	printf(
 	"SOKOAN game --byCFY\n"
 	"this game is based on command line.\n"
+	"'#' is wall so you cannot pass,while '_' is on the \n"
+	"opposite,'M' is box,'.' is the destinations\n"
+	"of the boxes,'A' is YOU.\n"
 	"type awds to move,and r to reset.\n"
 	"press any key to start.\n");
 	getchar();
