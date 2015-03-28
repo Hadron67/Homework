@@ -120,8 +120,15 @@ Node* list_get(List* _this,int position){
 Node* list_find(List* _this,void* target,nodeequal comparefunc){
 	Node* temp=_this->start;
 	while(temp!=NULL){
-		if(comparefunc(target,temp->data)){
-			return temp;
+		if(comparefunc!=NULL){
+			if(comparefunc(target,temp->data)){
+				return temp;
+			}
+		}
+		else {
+			if(target==temp->data){
+				return temp;
+			}
 		}
 		temp=temp->next;
 	}
