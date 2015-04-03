@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include "shop.h"
+int main(int agv,char* ags[]){
+	Repository* r=repository_new("r1",3);
+	Product* p=product_new("Dell","Inspiron-7535",5600);
+	r->add(r,p);
+	r->print(r);
+	repository_free(r);
+}
+
