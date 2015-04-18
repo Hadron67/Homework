@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document xmlns:cfy="http://www.wikipedia.org">
+    <Node cfy:data="Foundamental Physics">
+        <Node cfy:data="Relativity">
+            <Node cfy:data="Special Relativity" />
+            <Node cfy:data="General Relativity" />
+        </Node>
+        <Node cfy:data="Quatumn Theory">
+            <Node cfy:data="Quatumn ElectroDynamics" />
+            <Node cfy:data="Quatumn ChromoDynamics" />
+            <Node cfy:data="Fermi Point Interaction Theory" />
+            <Node cfy:data="Quatumn Gravity">
+                <Node cfy:data="String Theory" />
+                <Node cfy:data="Loop quatumn gravity" />
+                <Node cfy:data="Non-communicative geometry" />
+                <Node cfy:data="Scaled Relativity" />
+            </Node>
+        </Node>
+    </Node>
+</document>
+
