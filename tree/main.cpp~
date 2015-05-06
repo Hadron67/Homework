@@ -19,10 +19,14 @@ int main(int agv,char* ags[]){
 	n2->append(new Node<string>("Fermi Point Interaction Theory"));
 	n2->append(n8);
 	
-	n8->append(new Node<string>("String Theory"));
-	n8->append(new Node<string>("Loop quatumn gravity"));
-	n8->append(new Node<string>("Non-communicative geometry"));
-	n8->append(new Node<string>("Scaled Relativity"));
+	Node<string>* n9=new Node<string>("String Theory");
+	Node<string>* n10=new Node<string>("Loop quatumn gravity");
+	Node<string>* n11=new Node<string>("Non-communicative geometry");
+	Node<string>* n12=new Node<string>("Scaled Relativity");
+	n8->append(n9);
+	n8->append(n10);
+	n8->append(n11);
+	n8->append(n12);
 	
 	cout<<n->toXML()<<endl;
 	n->destroy();
