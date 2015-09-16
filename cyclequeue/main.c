@@ -11,9 +11,11 @@ int main (int agv,char * ags[]){
 	Queue * q=queue_new();
 	while (1){
 		int a;
+		char temp[20];
 		printf ("Queue>");
+		scanf ("%s",temp);
+		sscanf (temp,"%d",&a);
 		fflush (stdin);
-		scanf ("%d",&a);
 		if (a >= 0){
 			if (!queue_offer (q,a)){
 				queue_print (q,stdout);
